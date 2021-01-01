@@ -51,12 +51,11 @@ function App() {
     else if(itemArray[2]!=="empty" && itemArray[2]===itemArray[4] &&
       itemArray[4]===itemArray[6]){
       setWinMessage(`${itemArray[2]} wins!!`)
-      } 
+      }
 
     }
     const isDraw = () =>{
       if(!itemArray.includes("empty")&&!winMessage){
-        console.log(winMessage)
         setWinMessage("Draw!!")
     }
     }
@@ -76,10 +75,10 @@ function App() {
     else{
       return toast("Already Filled",{type:"error"})
     }
-    checkIsWinner();
     isDraw();
+    checkIsWinner();
+    
   }
-
   return (
     <div className="App">
      <Container className="p-5">
@@ -89,7 +88,7 @@ function App() {
           <h1 className="text-center">Tic-Tac-Toe</h1>
             {winMessage ? (
               <div className="mb-2 mt-2">
-                <h2 className="text-center" style={winMessage==="Draw!!"?{color:"yellow"}:{color:"green"}}>
+                <h2 className="text-center" style={winMessage==="Draw!!"?{color:"yellow"}:{color:"#ADFF2F"}}>
                   {winMessage}
                 </h2>
               </div>

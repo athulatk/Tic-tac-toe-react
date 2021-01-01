@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: url('https://www.callsbm.com/wp-content/uploads/2017/07/dark-blue-gradient-background-navy-blue-gradient-background-related-29-1024x851.jpeg');
+  background-size: contain;
+  font-family: 'Audiowide', cursive;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+h1{
+  margin:50px;
+}
+h2{
+  margin:70px;
+}
+.reload{
+  margin-top: 30px;
+  padding:25px;
+  width: 100%;
+  color:white;
+  background-color: #166d3b;
+  background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+  font-size: larger;
+  text-decoration: none;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:5px;
+  background-color: #422057FF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box {
+  width: auto;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EC8B5E;
+}
+.icons {
+  font-size: 25px;
+  color:#141A46;
 }

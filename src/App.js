@@ -17,7 +17,7 @@ function App() {
     setWinMessage("");
     itemArray.fill("empty",0,9);
   }
-
+  
   const checkIsWinner = () =>{
     if(itemArray[0]!=="empty" && itemArray[0]===itemArray[1] &&
       itemArray[1]===itemArray[2]){
@@ -54,9 +54,20 @@ function App() {
       } 
 
     }
+    const isDraw = () =>{
+      if(!itemArray.includes("empty")&&!winMessage){
+        console.log(winMessage)
+        setWinMessage("Draw!!")
+    }
+    }
   const changeItem = itemNumber => {
     if(winMessage){
-      return toast(winMessage,{type:"success"});
+      if(winMessage==="Draw!!"){
+        return toast.warning(winMessage)
+      }
+      else{
+        return toast.success(winMessage)
+      }
     }
     if(itemArray[itemNumber]==="empty"){
         itemArray[itemNumber]=isCross ? "cross" : "circle"
@@ -66,18 +77,19 @@ function App() {
       return toast("Already Filled",{type:"error"})
     }
     checkIsWinner();
+    isDraw();
   }
 
   return (
     <div className="App">
      <Container className="p-5">
-       <ToastContainer position="bottom-center"/>
+       <ToastContainer position="top-right" hideProgressBar={true} autoClose={2000}/>
        <Row>
           <Col md={6} className="offset-md-3">
           <h1 className="text-center">Tic-Tac-Toe</h1>
             {winMessage ? (
               <div className="mb-2 mt-2">
-                <h2 className="text-center" style={{color:'green'}}>
+                <h2 className="text-center" style={winMessage==="Draw!!"?{color:"yellow"}:{color:"green"}}>
                   {winMessage}
                 </h2>
               </div>

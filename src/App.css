@@ -6,13 +6,13 @@ body {
   color: white;
 }
 h1{
-  margin:50px;
+  margin:20px;
 }
 h2{
-  margin:70px;
+  margin:30px;
 }
 .reload{
-  margin-top: 30px;
+  margin-top:20px;
   padding:25px;
   width: 100%;
   color:white;
@@ -37,6 +37,6 @@ h2{
   background-color: #EC8B5E;
 }
 .icons {
-  font-size: 25px;
+  font-size: 28px;
   color:#141A46;
 }
